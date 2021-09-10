@@ -1,0 +1,18 @@
+# ~./dotfiles/.stow.local.ignore: Files to be ignored by gnu 'stow'
+#
+# Comments and blank lines are allowed.
+#
+
+\.git
+\.gitignore
+
+^/README.*
+^/readme.*
+^/Readme.*
+^/ReadMe.*
+
+^/LICENSE.*
+^/License.*
+^/license.*
+
+^/COPYING

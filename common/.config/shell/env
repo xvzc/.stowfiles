@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# PATHS
+export ZSH="$HOME/.oh-my-zsh"
+export LOCAL_BIN=$HOME/.local/bin
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH=${PATH}:$LOCAL_BIN
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# ENV
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'  # Usage of python3
+
+# esc key delay 
+export KEYTIMEOUT=1 

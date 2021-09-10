@@ -1,0 +1,3 @@
+#/bin/zsh
+
+ln -s ~/.stowfiles/.stow-local-ignore ~/.stowfiles/$1/.stow-local-ignore
