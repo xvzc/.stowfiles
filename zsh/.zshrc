@@ -26,26 +26,21 @@ plugins=(
     docker-compose
 )
 
-export DOT_FILES=$HOME/dotfiles 
-
 source $HOME/.profile
-source ~/.config/shell/init
-source ~/.config/shell/func
-source ~/.config/shell/fzf
-source ~/.config/shell/aliases
-source ~/.config/shell/env
-source ~/.config/shell/styles
-
+source ~/.zsh/init
+source ~/.zsh/func
+source ~/.zsh/aliases
+source ~/.zsh/env
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source $DOT_FILES/shell/fzf
-
+source ~/.zsh/fzf
+source ~/.zsh/styles
 source $ZSH/oh-my-zsh.sh
 
-bindkey -v # vim keymapping on shell
-
-fpath+=$HOME/.zsh
+fpath+=$HOME/.zsh/pure
 zmodload zsh/nearcolor
 
 autoload -U promptinit; promptinit
 
 prompt pure
+
+bindkey -v # vim keymapping on shell

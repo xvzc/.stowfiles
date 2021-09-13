@@ -1,0 +1,246 @@
+;==========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+[styles]
+; focused-bg = #7E807E
+focused-bg = #c4c0a7 
+; unfocused-bg = #4E524F
+unfocused-bg = #5e5e47
+module-padding = 2
+
+error = #BA2922
+separator = #BA2922
+
+font-light = #657b83
+font-basic = #272827
+
+font-0 = "Source Code Pro Semibold:size=10;1"
+font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 5 Brands:size=10;1"
+
+[bar/jerry]
+width = 100%
+height = 27
+radius = 0
+fixed-center = true
+
+background = ${styles.font-basic}
+foreground = ${styles.font-light}
+
+line-size = 3
+line-color =
+
+border-size = 0
+border-color =
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = ${styles.font-0}
+font-1 = ${styles.font-1}
+font-2 = ${styles.font-2}
+
+modules-left = i3
+modules-center = date 
+modules-right = memory cpu eth pulseaudio 
+
+; tray-position = right
+;tray-padding = 1
+; wm-restack = i3
+override-redirect = false
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = ${styles.module-padding}
+label-mode-foreground = ${styles.font-light}
+label-mode-background = ${styles.font-basic}
+
+label-unfocused = %index%
+label-unfocused-background = ${styles.unfocused-bg}
+label-unfocused-foreground = ${styles.font-basic}
+label-unfocused-padding = ${styles.module-padding}
+
+label-focused = %index%
+label-focused-background = ${styles.focused-bg}
+label-focused-foreground = ${styles.font-basic}
+label-focused-padding = ${styles.module-padding}
+
+label-visible = %index%
+label-visible-background = ${styles.focused-bg}
+label-visible-foreground = ${styles.font-basic}
+label-visible-padding = ${styles.module-padding}
+
+label-urgent = %index%
+label-urgent-background = ${styles.error}
+label-urgent-padding = ${styles.module-padding}
+
+; WIFI
+; format-connected = <ramp-signal> <label-connected>
+; format-connected-foreground = ${styles.font-basic}
+; format-connected-background = ${styles.focused-bg}
+; format-connected-padding = 2
+; label-connected = %essid%
+
+; format-disconnected =
+
+; ramp-signal-0 = 
+; ramp-signal-1 = 
+; ramp-signal-2 = 
+; ramp-signal-3 = 
+; ramp-signal-4 = 
+; ramp-signal-foreground = ${styles.font-basic}
+
+[module/memory]
+type = internal/memory
+format = <label>
+label = RAM%percentage_used: 3%%
+format-background = ${styles.focused-bg}
+format-foreground = ${styles.font-basic}
+format-padding = ${styles.module-padding}
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+[module/cpu]
+type = internal/cpu
+
+interval = 2
+
+format = <label>
+format-background = ${styles.focused-bg}
+format-foreground = ${styles.font-basic}
+format-padding = ${styles.module-padding}
+
+label = "CPU%percentage: 3%%"
+
+[module/pulseaudio]
+type = internal/pulseaudio
+interval = 1
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = 
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <label-volume>
+format-volume-background = ${styles.focused-bg}
+format-volume-foreground = ${styles.font-basic}
+format-volume-padding = ${styles.module-padding}
+
+label-volume = "VOL%percentage: 3%%"
+
+label-muted = " MUTED "
+label-muted-background = ${styles.unfocused-bg}
+label-muted-foreground = ${styles.font-basic}
+label-muted-padding = ${styles.module-padding}
+
+; Right and Middle click
+click-right = pavucontrol
+; click-middle =
+
+[module/eth]
+type = internal/network
+interface = eno1
+interval = 3.0
+
+format-connected-padding = ${styles.module-padding}
+format-connected-foreground = ${styles.font-basic}
+format-connected-background = ${styles.focused-bg}
+format-connected-prefix = "IP "
+format-connected-prefix-foreground = ${styles.font-basic}
+label-connected = %local_ip%
+
+format-disconnected-padding = ${styles.module-padding}
+format-disconnected-foreground = ${styles.font-basic}
+format-disconnected-background = ${styles.focused-bg}
+format-disconnected-prefix = ""
+format-disconnected-prefix-foreground = ${styles.font-basic}
+label-disconnected = "No Network"
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "%Y-%m-%d |"
+date-alt = "%Y-%m-%d |"
+
+time = "%H:%M:%S"
+time-alt = "%H:%M:%S"
+
+format-foreground = ${styles.font-basic}
+format-background = ${styles.focused-bg}
+format-padding = ${styles.module-padding}
+
+label = %date% %time%
+
+; [module/powermenu]
+; type = custom/menu
+
+; expand-right = true
+
+; format-spacing = 1
+
+; label-open = 
+; label-open-foreground = ${styles.font-light}
+; label-close =  cancel
+; label-close-foreground = ${styles.error}
+; label-separator = |
+; label-separator-foreground = ${styles.separator}
+
+; menu-0-0 = reboot
+; menu-0-0-exec = menu-open-1
+; menu-0-1 = power off
+; menu-0-1-exec = menu-open-2
+; menu-0-2 = log off
+; menu-0-2-exec = menu-open-3
+
+; menu-1-0 = cancel
+; menu-1-0-exec = menu-open-0
+; menu-1-1 = reboot
+; menu-1-1-exec = reboot
+
+; menu-2-0 = power off
+; menu-2-0-exec = poweroff
+; menu-2-1 = cancel
+; menu-2-1-exec = menu-open-0
+
+; menu-3-0 = log off
+; menu-3-0-exec = i3 exit logout
+; menu-3-1 = cancel
+; menu-3-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

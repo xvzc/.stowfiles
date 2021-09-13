@@ -30,6 +30,7 @@ bindsym $mod+l focus right
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
+
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
@@ -49,36 +50,24 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
-# split orientation
-bindsym $mod+shift+v split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+backslash move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+backslash scratchpad show
 
 # navigate workspaces next / previous
 bindsym $mod+Ctrl+l workspace next
@@ -174,16 +163,17 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
+# DEPENDENCY: sudo apt install imagemagick
 bindsym $mod+Escape mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+set $mode_system (l)lock, (o)logout, (r)eboot, (Shift+s)shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit lock, mode "default"
+    # bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit suspend, mode "default"
+    # bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit switch_user, mode "default"
+    bindsym o exec --no-startup-id ~/.config/i3/scripts/i3exit logout, mode "default"
+    # bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/.config/i3/scripts/i3exit shutdown, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -198,10 +188,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -215,8 +205,8 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -226,7 +216,9 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/polybar_launch.sh
 
 # Theme colors
-client.focused          #272827 #272827 #657b83 #272827 #272827
+# client.focused          #272827 #272827 #657b83 #272827 #272827
+# client.focused          #000000 #285577 #ffffff #c4c0a7 #c4c0a7
+client.focused          #000000 #285577 #ffffff #44eda7 #44eda7
 client.focused_inactive #272827 #272827 #657b83 #272827 #272827
 client.unfocused        #272827 #272827 #657b83 #272827 #272827
 client.urgent           #272827 #272827 #657b83 #272827 #272827
@@ -276,6 +268,7 @@ mode "$mode_gaps_inner" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_outer" {
         bindsym plus  gaps outer current plus 5
         bindsym minus gaps outer current minus 5
@@ -300,20 +293,32 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
-# Jerry Settings
-
-
+# Jerry's Settings
 for_window [title="Wine"] move position 10 997
 
 # Init
 exec_always --no-startup-id "setxkbmap -layout us,kr"
 
 # bindsym
-bindsym $mod+t split toggle
-bindsym Mod4+space exec ~/i3lang.sh
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout toggle split
+# bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+
+# split orientation
+# bindsym $mod+shift+v split h;exec notify-send 'tile horizontally'
+# bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+Shift+minus split h;
+bindsym $mod+minus split v;
+bindsym Mod4+space exec ~/.config/i3/scripts/i3lang.sh
 bindsym $mod+space exec rofi -modi drun -show drun -show-icons
 bindsym $mod+q kill
+bindsym $mod+y fullscreen disable; floating enable; resize set 638 360; sticky enable; move window to position 1272 37 
+bindsym $mod+Tab focus mode_toggle
+
+# focus the parent container
+bindsym $mod+p focus parent
+bindsym $mod+c focus child
+
 # bindsym $mod+d exec --no-startup-id rofi -show run
 # bindsym $mod+Shift+Tab workspace prev
-
-

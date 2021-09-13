@@ -48,4 +48,8 @@ set pumheight=10
 set noshowmode
 set showtabline=2
 
+set backupdir=~/.config/nvim/backup//
+set directory=~/.config/nvim/backup//
+set undodir=~/.config/nvim/undo//
+
 autocmd FileType * set formatoptions-=o " set this line with autocmd to get it applied at runtime

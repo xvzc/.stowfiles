@@ -1,25 +1,19 @@
-# dotfiles
-A repository for dotfiles
+# .stowfiles
+A repository for dotfiles and some settings. GNU software stow is used to control these files.
 
-# Instruction
-
-## Cross platform setting
-A variable which indicates the OS is set dynamically on shell startup. See echo ```$CUR_OS```
+# Cross platform setting
+A variable which indicates the OS is set dynamically on shell startup. See ```$echo CUR_OS```
 
 ## Dependencies
 ```
 zsh
 oh-my-zsh
 node
-coc-nvim
 vim-plug
 tmux
-tpm
 oh-my-tmux
 fzf
 ripgrep
-d2coding nerd font
-ccls
 sdkman
 ```
 
@@ -35,5 +29,5 @@ Especailly on WSL, There is an issue that the DNS server is set to a wrong desti
 echo "104.16.17.35\tregistry.npmjs.org" >> /etc/hosts
 ```
 
-# Make hard links of main dotfiles with githooks
-Make dotfiles like .zshrc, .tmux.conf.local etc .. hard links of files in this repository with git hook. See ```config.sh```
+# Stow
+Use ```stow $folder_name``` to make symlink of stowfiles

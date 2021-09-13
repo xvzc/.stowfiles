@@ -1,3 +1,8 @@
-#/bin/zsh
-
-ln -s ~/.stowfiles/.stow-local-ignore ~/.stowfiles/$1/.stow-local-ignore
+for d in */ ; do
+    if ! test -f ~/.stowfiles/$d.stow-local-ignore; then
+        ln -s ~/.stowfiles/.stow-local-ignore ~/.stowfiles/$d.stow-local-ignore
+        echo 'Creating symlink in' $d
+    else
+        echo '.The symlink stow-local-ignore already exists in' $d
+    fi
+done
