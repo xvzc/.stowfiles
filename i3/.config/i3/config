@@ -213,7 +213,8 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/polybar/polybar_launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/polybar_launch.sh
+# exec_always --no-startup-id i3status
 
 # Theme colors
 # client.focused          #272827 #272827 #657b83 #272827 #272827
@@ -294,6 +295,12 @@ bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
 # Jerry's Settings
+bar {
+    position top
+    status_command py3status -c ~/.config/i3/i3status.conf
+    separator_symbol ⁞
+}
+
 for_window [title="Wine"] move position 10 997
 
 # Init
@@ -311,7 +318,8 @@ bindsym $mod+t layout tabbed
 bindsym $mod+Shift+minus split h;
 bindsym $mod+minus split v;
 bindsym Mod4+space exec ~/.config/i3/scripts/i3lang.sh
-bindsym $mod+space exec rofi -modi drun -show drun -show-icons
+# bindsym $mod+space exec rofi -modi drun -show drun -show-icons
+bindsym $mod+space exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal termite -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
 bindsym $mod+q kill
 bindsym $mod+y fullscreen disable; floating enable; resize set 638 360; sticky enable; move window to position 1272 37 
 bindsym $mod+Tab focus mode_toggle
