@@ -39,13 +39,8 @@ colors:
    text: CellBackground
    background: '#f6f6f6'
 
-
-
-
-
-
-
-
+key_bindings:
+  - { key: Space, mods: Control, chars: "\x00" }
 
 
 
