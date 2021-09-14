@@ -43,4 +43,4 @@ autoload -U promptinit; promptinit
 
 prompt pure
 
-bindkey -v # vim keymapping on shell
+source ~/.zsh/bindkey

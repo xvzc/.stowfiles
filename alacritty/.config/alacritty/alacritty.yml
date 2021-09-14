@@ -15,6 +15,13 @@ window:
    x: 3
    y: 0
 
+  position:
+    # none
+
+ # no title bar
+  decorations: "buttonless"
+
+
 background_opacity: 0.85
 
 colors:

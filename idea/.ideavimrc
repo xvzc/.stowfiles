@@ -1,0 +1,12 @@
+nnoremap <SPACE> <Nop>
+
+set keep-english-in-normal
+
+let mapleader=" "
+set easymotion
+let g:EasyMotion_override_acejump = 0
+
+nmap <leader>f <Plug>(easymotion-s)
+
+
+
