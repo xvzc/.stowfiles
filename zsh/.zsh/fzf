@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 # alias fcd='cd $(fd --type d --search-path=$HOME/_jry | fzf)'
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
@@ -56,7 +56,12 @@ function fvi() {
 }
 
 function fcd() {
-  OUTPUT=$(fd --type d --hidden --search-path=$HOME $1 | fzf)
+  if [[ $1 == '--g' ]]; then
+      OUTPUT=$(fd --type d --hidden --search-path=$HOME $2 | fzf)
+  else
+      OUTPUT=$(fd --type d --hidden $1 | fzf)
+  fi
+
   if [[ ! -z $OUTPUT ]]; then
     cd $OUTPUT
   fi

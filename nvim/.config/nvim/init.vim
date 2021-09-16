@@ -20,6 +20,7 @@ Plug 'scrooloose/nerdcommenter'
 " Language support
 Plug 'tpope/vim-markdown'
 Plug 'fatih/vim-go', { 'tag': '*'  }
+Plug 'gisphm/vim-gitignore'
 
 " Styles
 Plug 'junegunn/goyo.vim'
