@@ -1,5 +1,5 @@
-let g:coc_global_extensions = [ 'coc-snippets', 
-      \ 'coc-imselect', 
+let g:coc_global_extensions = [ 
+      \ 'coc-snippets', 
       \ 'coc-html', 
       \ 'coc-tsserver', 
       \ 'coc-sh', 
@@ -11,6 +11,9 @@ let g:coc_global_extensions = [ 'coc-snippets',
       \ 'coc-explorer',
       \ ]
 
+if g:cur_os != 'linux'
+  call add(g:coc_global_extensions, 'coc-imselect')
+endif
 
 let g:coc_node_path = substitute(system('which node'), '\n', '', '')
 

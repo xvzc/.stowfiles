@@ -305,6 +305,7 @@ for_window [title="Wine"] move position 10 997
 
 # Init
 exec_always --no-startup-id "setxkbmap -layout us,kr"
+exec_always --no-startup-id "xmodmap -e 'add Mod1 = Alt_R'"
 
 # bindsym
 # change container layout (stacked, tabbed, toggle split)
@@ -317,7 +318,7 @@ bindsym $mod+t layout tabbed
 # bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+Shift+minus split h;
 bindsym $mod+minus split v;
-bindsym Mod4+space exec ~/.config/i3/scripts/i3lang.sh
+# bindsym Mod4+space exec ~/.config/i3/scripts/i3lang.sh
 # bindsym $mod+space exec rofi -modi drun -show drun -show-icons
 bindsym $mod+space exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal termite -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
 bindsym $mod+q kill
