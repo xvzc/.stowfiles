@@ -36,14 +36,16 @@ function! RUN_CPP()
         echo compile_out 
         return
     endif
-    let run_out=system(getcwd().expand('/a.out'))
+    let run_out=system(getcwd().expand('/a.out 2>&1'))
     echo compile_out 
-    echo ' '
-    echo '-------OUTPUT--------'
-    echo ' '
-    echo run_out 
-    echo ' '
-    let run_out=system(expand('rm -rf ').getcwd().expand('/a.out')) " remove out file
+    echom ' ' | echom "-------OUTPUT--------" | echom ' '
+    if run_out == ''
+      echo "No output. Something might have gone wrong." | echom ' '
+    else
+      echo run_out | echom ' '
+    endif
+
+    call system(expand('rm -rf ').getcwd().expand('/a.out')) " remove out file
 endfunction
 
 function! RUN_SHELL()
