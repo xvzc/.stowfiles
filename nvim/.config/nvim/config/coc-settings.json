@@ -18,14 +18,18 @@
     },
 
 
-    "clangd.arguments": ["-header-insertion=never"],
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+    "clangd.arguments": [
+        "-header-insertion=never"
+    ],
+    "clangd.fallbackFlags": [ "-std=c++17" ],
     "tsserver.implicitProjectConfig.experimentalDecorators": true,
 
     "imselect.defaultInput": "com.apple.keylayout.ABC",
     "imselect.enableStatusItem": true,
 
     "codeLens.enable": true,
-    "signature.enable": true,
+    "signature.enable": false,
 
     "explorer.icon.enableNerdfont": true,
     "explorer.git.enable" : true,
@@ -83,6 +87,36 @@
     "suggest.echodocSupport": false,
     "suggest.preferCompleteThanJumpPlaceholder": false,
 
+    "diagnostic.floatConfig": {
+        "border" : true,
+        "highlight" : "#FFFFFF",
+        "title" : " diagnostic",
+        "winblend": 0,
+        "shadow" : true
+    },
+    "hover.floatConfig": {
+        "border" : true,
+        "highlight" : "#FFFFFF",
+        "title" : " hover",
+        "winblend": 0,
+        "shadow" : true
+    },
+    "dialog.floatHighlight": null,
+    "signature.floatConfig": {
+        "border" : true,
+        "highlight" : "#FFFFFF",
+        "title" : " signature",
+        "winblend": 0,
+        "shadow" : true
+    },
+    "suggest.floatConfig": {
+        "border" : true,
+        "highlight" : "#FFFFFF",
+        "winblend": 0,
+        "shadow" : true
+    },
+
+
     "list.height": 10,
     "list.previewSplitRight": true,
 
@@ -123,6 +157,6 @@
         "snippet": "[snip]",
         "typeParameter": "[tparam]",
         "default": "[none]"
-    },
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
+    }
+
 }
