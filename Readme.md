@@ -1,8 +1,12 @@
 # .stowfiles
-A repository for dotfiles and some settings. GNU software stow is used to control these files.
+A repository for dotfiles and some settings. GNU software stow is used to control dotfiles and setting files.
 
-# Cross platform setting
-A variable which indicates the OS is set dynamically on shell startup. See ```$echo CUR_OS```
+# Stow
+```stow $folder_name``` makes symlinks for the files folders inside, at the home directory.
+
+# Cross platform settings
+A variable which indicates the OS will be set dynamically on shell startup.  
+See ```$echo CUR_OS```
 
 ## Dependencies
 ```
@@ -29,5 +33,3 @@ Especailly on WSL, There is an issue that the DNS server is set to a wrong desti
 echo "104.16.17.35\tregistry.npmjs.org" >> /etc/hosts
 ```
 
-# Stow
-Use ```stow $folder_name``` to make symlink of stowfiles

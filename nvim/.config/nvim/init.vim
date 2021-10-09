@@ -16,6 +16,7 @@ Plug 'mhinz/vim-startify' " fancy start screen
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular' " text align plugin
 Plug 'scrooloose/nerdcommenter'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Language support
 Plug 'tpope/vim-markdown'
