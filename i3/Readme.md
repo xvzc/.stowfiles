@@ -20,16 +20,9 @@ This is neccesary to make Terminal transparent if the terminal supports transpar
 ```bash
  $ sudo apt-get install compton compton-conf
 ```
+### i3themer
 
-### polybar
-If you are using Ubuntu 20.10 or later, you can install polybar simply with pakage manager
-```bash
-# dependencies
- $ pip3 install pywal
-
-# polybar itself
- $ sudo apt install polybar
-```
+### py3status
 
 ### double-width glyphs supports for urxvt
 [Repo](https://github.com/powerman/wcwidth-icons.git)
