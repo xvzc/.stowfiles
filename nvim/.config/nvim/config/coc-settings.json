@@ -10,10 +10,22 @@
                 "go"
             ]
         },
-        "pyls": {
+        "python": {
             "command": "pyls",
             "filetypes": ["python"],
-            "settings": {}
+            "settings": {
+                "pyls" : {
+                    "plugins" : {
+                        "pycodestyle": {
+                            "ignore": [
+                                "E201",
+                                "E501",
+                                "E303"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     },
 
