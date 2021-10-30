@@ -31,20 +31,16 @@ colors:
    foreground: '#c5c8c6'
 
   cursor:
-   text: CellBackground
+   text: '#0f0f0f'
    cursor: '#f6f6f6' 
 
   vi_mode_cursor:
-   text: CellBackground
-   cursor: CellForeground
-
-  vi_mode_cursor:
-   text: CellBackground
-   cursor: CellForeground
+   text: '#0f0f0f'
+   cursor: '#f6f6f6' 
 
   selection:
-   text: CellBackground
-   background: '#f6f6f6'
+   text: '#0f0f0f'
+   cursor: '#f6f6f6' 
 
 key_bindings:
   - { key: Space, mods: Control, chars: "\x00" }

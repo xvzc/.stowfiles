@@ -37,6 +37,8 @@ highlight EasyMotionTarget2Second ctermbg=none ctermfg=252 guibg=none guifg=#6FE
 highlight EasyMotionShade  ctermbg=none ctermfg=243 guibg=none guifg=#646466
 
 highlight Cursor cterm=none gui=none guifg=#646466 ctermfg=black
+hi Cursor guifg=#121212 guibg=#afd700
+
 highlight SpecialKey guibg=none guifg=#6FEF78
 
 command! -bang -nargs=? -complete=dir HiGroup
