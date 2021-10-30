@@ -43,7 +43,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nnoremap <space>e :CocCommand explorer<CR>
+nnoremap <silent> <space>e :CocCommand explorer<CR>
 
 nnoremap <silent><nowait> <space>i  :<C-u>CocFzfList<cr>
 " Remap keys for applying codeAction to the current buffer.

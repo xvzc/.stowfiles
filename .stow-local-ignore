@@ -16,3 +16,7 @@
 ^/license.*
 
 ^/COPYING
+
+.DS_Store
+nvim/.config/nvim/plugged/
+nvim/.config/nvim/undo/
