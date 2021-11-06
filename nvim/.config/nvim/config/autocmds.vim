@@ -3,7 +3,7 @@ autocmd BufRead,BufNewFile */etc/nginx/* set ft=nginx
 autocmd BufRead,BufNewFile nginx.conf set ft=nginx
 autocmd BufRead,BufNewFile *.nginx set ft=nginx
 
-autocmd BufRead,BufNewFile ~/_jry/algorithms/cpp/*.cpp 
+autocmd BufRead,BufNewFile ~/_jry/algorithms/*.cpp 
       \ nnoremap <silent><C-M-t> :0r ~/_jry/algorithms/cpp/template.cpp<CR>
 
 autocmd filetype python 

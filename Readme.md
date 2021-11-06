@@ -2,7 +2,7 @@
 A repository for dotfiles and some settings. GNU software stow is used to control dotfiles and setting files.
 
 # Stow
-```stow $folder_name``` makes symlinks for the files folders inside, at the home directory.
+```stow $folder_name``` makes symlinks of files inside the folder.
 
 # Cross platform settings
 A variable which indicates the OS will be set dynamically on shell startup.  
