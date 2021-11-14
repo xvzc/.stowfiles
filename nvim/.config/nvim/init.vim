@@ -19,6 +19,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular' " text align plugin
 Plug 'scrooloose/nerdcommenter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'akinsho/toggleterm.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 if g:cur_os == 'linux'
   Plug 'jerry901/vim-ibus'
@@ -63,7 +65,7 @@ function! GetNeoVimVersion()
     redir END
     return matchstr(s, 'NVIM v\zs[^\n]*')
 endfunction
-  
+
 source ~/.config/nvim/config/clipboard.vim
 source ~/.config/nvim/config/preferences.vim
 source ~/.config/nvim/config/keymaps.vim

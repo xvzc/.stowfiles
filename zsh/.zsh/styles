@@ -26,6 +26,8 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[comment]=fg=#7d807e
+PURE_PROMPT_SYMBOL=$
+PURE_PROMPT_VICMD_SYMBOL=*
 #ZSH_HIGHLIGHT_STYLES[assign]=none
 
 # change the path color
