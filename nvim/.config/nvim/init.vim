@@ -1,5 +1,7 @@
 filetype plugin indent on
 
+let g:cur_os=$CUR_OS
+
 call plug#begin()
 " Completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'antoinemadec/coc-fzf'
@@ -17,6 +19,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular' " text align plugin
 Plug 'scrooloose/nerdcommenter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+if g:cur_os == 'linux'
+  Plug 'jerry901/vim-ibus'
+  let g:ibus#layout = 'xkb:us::eng'
+  let g:ibus#engine = 'hangul'
+endif
 
 " Language support
 Plug 'tpope/vim-markdown'
@@ -55,8 +63,6 @@ function! GetNeoVimVersion()
     redir END
     return matchstr(s, 'NVIM v\zs[^\n]*')
 endfunction
-
-let g:cur_os=$CUR_OS
   
 source ~/.config/nvim/config/clipboard.vim
 source ~/.config/nvim/config/preferences.vim
@@ -67,3 +73,4 @@ source ~/.config/nvim/config/styles.vim " styles.vim should be at the last line
 for f in split(glob('~/.config/nvim/config/plugins/*.vim'), '\n') " load all plugin settings
     exe 'source' f
 endfor
+
