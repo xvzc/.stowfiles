@@ -20,7 +20,7 @@ ZSH_THEME=""
 
 plugins=(
 	fzf
-	osx
+    macos
     zsh-syntax-highlighting
     docker 
     docker-compose
