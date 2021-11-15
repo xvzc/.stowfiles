@@ -94,5 +94,5 @@ function set_cur_os() {
 
 ########## favorites
 set_cur_os
-run_tmux_on_cases
-init_sdkman
+# run_tmux_on_cases
+# init_sdkman
