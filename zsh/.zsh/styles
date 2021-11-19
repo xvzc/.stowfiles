@@ -1,7 +1,8 @@
 #!/bin/zsh
 
-export LSCOLORS="ExGxFxdxCxdadahbadacec"
-# unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+export LS_COLORS="di=1;34:ln=35:so=32:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
 
 #zsh-syntax-highlight
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
@@ -12,22 +13,22 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=green
 ZSH_HIGHLIGHT_STYLES[alias]=fg=green
 ZSH_HIGHLIGHT_STYLES[builtin]=fg=green
-#ZSH_HIGHLIGHT_STYLES[function]=none
 ZSH_HIGHLIGHT_STYLES[command]=fg=green
-#ZSH_HIGHLIGHT_STYLES[precommand]=fg=none
-#ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-#ZSH_HIGHLIGHT_STYLES[hashed-command]=none
-#ZSH_HIGHLIGHT_STYLES[globbing]=none
-#ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=blue
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=blue
-#ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[comment]=fg=#7d807e
 #ZSH_HIGHLIGHT_STYLES[assign]=none
+#ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+#ZSH_HIGHLIGHT_STYLES[function]=none
+#ZSH_HIGHLIGHT_STYLES[precommand]=fg=none
+#ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+#ZSH_HIGHLIGHT_STYLES[hashed-command]=none
+#ZSH_HIGHLIGHT_STYLES[globbing]=none
+#ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
 
 # change the path color
 #zstyle :prompt:pure:path color cyan 
@@ -45,3 +46,24 @@ zstyle :prompt:pure:prompt:success color '#f5b5f4'
 
 # turn on git stash status
 zstyle :prompt:pure:virtualenv show yes
+
+# Do menu-driven completion.
+zstyle ':completion:*' menu select
+
+# Color completion for some things.
+# http://linuxshellaccount.blogspot.com/2008/12/color-completion-using-zsh-modules-on.html
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# formatting and messages
+# zstyle ':completion:*' verbose yes
+# zstyle ':completion:*:descriptions' format "$fg[yellow]%B--- %d%b"
+# zstyle ':completion:*:messages' format '%d'
+# zstyle ':completion:*:warnings' format "No matches"
+# zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
+# zstyle ':completion:*' group-name ''
+
+# Completers for my own scripts
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+
+# zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")';

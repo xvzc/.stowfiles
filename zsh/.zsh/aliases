@@ -5,7 +5,9 @@
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+
 # alias ls='ls -G'
+# export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 alias g++='g++ -std=c++17'
 
@@ -17,6 +19,7 @@ alias tkt='tmux kill-session -t'
 alias tst='tmux switch -t'
 alias tns='tmux new -s'
 alias tls='tmux ls'
+alias ofd='open .'
 
 alias live-server='live-server --port=8080 --browser=chromium'
 
