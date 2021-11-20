@@ -1,7 +1,10 @@
+# clone
+```git clone --recurse-submodules https://github.com/jerry901/.stowfiles```
+
 # .stowfiles
 A repository for dotfiles and some settings. GNU software stow is used to control dotfiles and setting files.
 
-# Stow
+# stow
 ```stow $folder_name``` makes symlinks of files inside the folder.
 
 # Cross platform settings
