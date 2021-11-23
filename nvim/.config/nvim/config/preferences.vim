@@ -16,9 +16,11 @@ set mousehide               " Hide the mouse cursor while typing
 set mouse-=a                 " Automatically enable mouse usage
 
 set termguicolors
+
 if g:cur_os == 'linux'
   set notermguicolors
 endif
+
 set conceallevel=1
 set background=dark
 
@@ -26,8 +28,7 @@ set cindent " C sytle auto indent
 
 set scrolloff=2 
 set shiftwidth=4
-autocmd FileType vim set shiftwidth=2
-autocmd FileType zsh set shiftwidth=2
+
 set expandtab
 
 set tabstop=4
@@ -51,5 +52,7 @@ set showtabline=2
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/backup//
 set undodir=~/.config/nvim/undo//
+
+set cursorline
 
 autocmd FileType * set formatoptions-=o " set this line with autocmd to get it applied at runtime

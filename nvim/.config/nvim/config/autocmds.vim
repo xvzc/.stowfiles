@@ -1,3 +1,6 @@
+autocmd FileType vim set shiftwidth=2
+autocmd FileType zsh set shiftwidth=2
+
 autocmd BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
 autocmd BufRead,BufNewFile */etc/nginx/* set ft=nginx
 autocmd BufRead,BufNewFile nginx.conf set ft=nginx
@@ -11,12 +14,10 @@ autocmd filetype python
 autocmd filetype cpp 
       \ nnoremap <silent><M-C-r> :call RUN_CPP()<CR>
 autocmd filetype sh 
-      \ nnoremap <silent><M-C-r> :call RUN_SHELL()<CR>
+      \ nnoremap <silent><M-C-r> :call RUN_SH()<CR>
 
-" go to the last position that I was editing the file on
+" go to the last position that I was working on
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-" autocmd BufEnter * lcd %:p:h
 
 " functions
 function! RUN_PYTHON()
@@ -45,10 +46,10 @@ function! RUN_CPP()
       echo run_out | echom ' '
     endif
 
-    call system(expand('rm -rf ').getcwd().expand('/a.out')) " remove out file
+    call system(expand('rm -rf ').getcwd().expand('/a.out')) " remove out the run file
 endfunction
 
-function! RUN_SHELL()
+function! RUN_SH()
     silent w
     let output=system('zsh '.expand('%:p'))
     echo ' '

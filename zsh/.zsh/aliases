@@ -6,8 +6,9 @@ alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
-# alias ls='ls -G'
-# export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+if [[ $CUR_OS == 'linux' ]]; then
+  alias ls='ls --color'
+fi
 
 alias g++='g++ -std=c++17'
 
@@ -15,10 +16,12 @@ alias vi='nvim'
 
 alias tre='tmux attach'
 alias tat='tmux attach-session -t'
+alias tdt='tmux detach'
 alias tkt='tmux kill-session -t'
 alias tst='tmux switch -t'
 alias tns='tmux new -s'
 alias tls='tmux ls'
+
 alias ofd='open .'
 
 alias live-server='live-server --port=8080 --browser=chromium'
