@@ -30,5 +30,5 @@ autoload -Uz compinit && compinit
 prompt pure
 
 source ~/.zsh/bindkey
-source $HOME/.stowfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
