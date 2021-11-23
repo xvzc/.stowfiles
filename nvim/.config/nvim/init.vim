@@ -5,7 +5,7 @@ let g:cur_os=$CUR_OS
 call plug#begin()
 " Completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'antoinemadec/coc-fzf'
-" Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
 " Extra feature
@@ -31,7 +31,6 @@ endif
 " Language support
 Plug 'tpope/vim-markdown'
 Plug 'fatih/vim-go', { 'tag': '*'  }
-Plug 'gisphm/vim-gitignore'
 
 " Styles
 Plug 'junegunn/goyo.vim'

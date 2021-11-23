@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
