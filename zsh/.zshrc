@@ -31,3 +31,7 @@ prompt pure
 
 source ~/.zsh/bindkey
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53d5ffb77ca90fa930ce12ffa97311f119030f1c
