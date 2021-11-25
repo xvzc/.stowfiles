@@ -5,7 +5,8 @@ let g:cur_os=$CUR_OS
 call plug#begin()
 " Completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'antoinemadec/coc-fzf'
-Plug 'honza/vim-snippets'
+
+" Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
 " Extra feature
@@ -23,7 +24,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
 if g:cur_os == 'linux'
-  Plug 'jerry901/vim-ibus'
+  " Plug 'jerry901/vim-ibus'
   let g:ibus#layout = 'xkb:us::eng'
   let g:ibus#engine = 'hangul'
 endif

@@ -13,7 +13,6 @@ source ~/.zsh/env
 source ~/.zsh/fzf
 source ~/.zsh/styles
 source ~/.zsh/opt
-
 source ~/.zsh/bindkey
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -26,3 +25,4 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit -i
 
 prompt pure
+

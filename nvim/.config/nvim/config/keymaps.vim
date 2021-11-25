@@ -1,8 +1,4 @@
 " disable search highlight when <esc> pressed
-" nnoremap <silent><esc> :let @/=""<cr>:<backspace>
-" nmap <silent><esc> :call ESC_ACTION()<CR>
-
-" nmap <silent><ESC> :call ESC_ACTION()<CR>
 nmap <silent><expr> <esc> v:hlsearch ? 
             \ "\:nohl<CR>" : 
             \"\<esc>"
