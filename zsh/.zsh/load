@@ -5,10 +5,4 @@ skip_global_compinit=1
 zmodload zsh/nearcolor
 
 autoload -U promptinit; promptinit
-# autoload -Uz compinit && compinit
-
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+autoload -Uz compinit && compinit -i

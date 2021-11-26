@@ -14,6 +14,7 @@ source ~/.zsh/styles
 source ~/.zsh/opt
 source ~/.zsh/bindkey
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source ~/.zsh/fpath
 source ~/.zsh/load
 
