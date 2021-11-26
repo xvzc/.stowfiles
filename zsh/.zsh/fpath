@@ -1,0 +1,4 @@
+#!/bin/sh
+
+fpath+=$HOME/.zsh/completion
+fpath+=$HOME/.zsh/pure

@@ -32,4 +32,3 @@ if cur_os == "mac"
   " Uing OS Clipboard is default on MacOS
   lang en_US " This fixes wrong character issue when pasting Korean from MacOS clipboard
 endif
-
