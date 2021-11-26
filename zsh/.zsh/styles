@@ -31,7 +31,7 @@ zstyle :prompt:pure:path color blue
 #zstyle :prompt:pure:git:dirty color '#5e5d49'
 #zstyle :prompt:pure:git:branch color '#5e5d49'
 zstyle :prompt:pure:git:dirty color red
-zstyle :prompt:pure:git:branch color 'blue'
+zstyle :prompt:pure:git:branch color 'cyan'
 
 #zstyle :prompt:pure:git:branch:cached color 42
 zstyle :prompt:pure:virtualenv color '#5e5d49'
