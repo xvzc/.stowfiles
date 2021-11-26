@@ -12,13 +12,13 @@ autoload -U promptinit; promptinit
 if [[ $CUR_OS == 'linux' ]]; then
     autoload -Uz compinit
     for dump in ~/.zcompdump(N.mh+24); do
-        compinit
+        compinit -i
     done
     compinit -C
 elif [[ $CUR_OS == 'mac' ]]; then
     autoload -Uz compinit
     if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-        compinit
+        compinit -i
     else
         compinit -C
     fi
