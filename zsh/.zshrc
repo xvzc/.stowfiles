@@ -7,6 +7,7 @@ ZSH_DISABLE_COMPFIX="true"
 plugins=(
 	fzf
     macos
+    git
     docker 
     docker-compose
 )
