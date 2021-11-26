@@ -57,8 +57,8 @@ Plug 'morhetz/gruvbox'
 " Plug 'michaeljsmith/vim-indent-object'
 " Plug 'Shougo/neocomplcache.vim'
 " Plug 'vim-scripts/nginx.vim'
-
 call plug#end()
+
 function! GetNeoVimVersion()
     redir => s
     silent! version
@@ -75,4 +75,3 @@ source ~/.config/nvim/config/styles.vim " styles.vim should be at the last line
 for f in split(glob('~/.config/nvim/config/plugins/*.vim'), '\n') " load all plugin settings
     exe 'source' f
 endfor
-
