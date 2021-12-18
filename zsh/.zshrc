@@ -9,6 +9,7 @@ plugins=(
     git
     docker 
     docker-compose
+    vi-mode
 )
 
 source $HOME/.profile
@@ -24,6 +25,5 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.zsh/fpath
 source ~/.zsh/load
-
 
 prompt pure
