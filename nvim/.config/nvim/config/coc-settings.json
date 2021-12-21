@@ -34,11 +34,11 @@
     "clangd.arguments": [
         "-header-insertion=never"
     ],
-    "clangd.fallbackFlags": [ "-std=c++17" ],
+    "clangd.semanticHighlighting" : true,
     "tsserver.implicitProjectConfig.experimentalDecorators": true,
 
-    "typescript.suggestionActions.enabled" : false,
-    "javascript.suggestionActions.enabled" : false,
+    "typescript.suggestionActions.enabled" : true,
+    "javascript.suggestionActions.enabled" : true,
 
     "imselect.defaultInput": "com.apple.keylayout.ABC",
     "imselect.enableStatusItem": true,
