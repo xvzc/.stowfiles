@@ -22,8 +22,6 @@ alias tst='tmux switch -t'
 alias tns='tmux new -s'
 alias tls='tmux ls'
 
-alias dkc='docker-compose'
-
 alias ofd='open .'
 
 alias live-server='live-server --port=8080 --browser=chromium'

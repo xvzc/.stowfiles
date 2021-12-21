@@ -1,14 +1,12 @@
 {
     "languageserver":{
-        "go":{
-            "command":"gopls",
-            "rootPatterns":[
-                "go.mod"
-            ],
-            "trace.server":"verbose",
-            "filetypes":[
-                "go"
-            ]
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
         },
         "python": {
             "command": "pyls",
@@ -104,31 +102,23 @@
 
     "diagnostic.floatConfig": {
         "border" : true,
-        "highlight" : "#FFFFFF",
         "title" : " diagnostic",
-        "winblend": 0,
-        "shadow" : true
+        "winblend": 0
     },
     "hover.floatConfig": {
         "border" : true,
-        "highlight" : "#FFFFFF",
         "title" : " hover",
-        "winblend": 0,
-        "shadow" : true
+        "winblend": 0
     },
     "dialog.floatHighlight": null,
     "signature.floatConfig": {
         "border" : true,
-        "highlight" : "#FFFFFF",
         "title" : " signature",
-        "winblend": 0,
-        "shadow" : true
+        "winblend": 0
     },
     "suggest.floatConfig": {
         "border" : true,
-        "highlight" : "#FFFFFF",
-        "winblend": 0,
-        "shadow" : true
+        "winblend": 0
     },
 
 
