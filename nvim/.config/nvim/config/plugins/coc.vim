@@ -96,8 +96,8 @@ inoremap <silent><expr> <S-TAB>
       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetPrev', [])<cr>" :
       \ "\<C-d>"
 
-snoremap <buffer><silent><TAB> <Esc>:call coc#rpc#request('snippetNext', [])<cr>
-snoremap <buffer><silent><S-TAB> <Esc>:call coc#rpc#request('snippetPrev', [])<cr>
+snoremap <buffer><silent><nowait><TAB> <Esc>:call coc#rpc#request('snippetNext', [])<cr>
+snoremap <buffer><silent><nowait><S-TAB> <Esc>:call coc#rpc#request('snippetPrev', [])<cr>
 
 " functions
 " tab behavior

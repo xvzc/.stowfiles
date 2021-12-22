@@ -2,6 +2,7 @@ filetype plugin indent on
 
 let g:cur_os=$CUR_OS
 
+<<<<<<< Updated upstream
 call plug#begin()
 " Completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'antoinemadec/coc-fzf'
@@ -59,6 +60,9 @@ Plug 'morhetz/gruvbox'
 " Plug 'Shougo/neocomplcache.vim'
 " Plug 'vim-scripts/nginx.vim'
 call plug#end()
+=======
+lua require('plugins')
+>>>>>>> Stashed changes
 
 function! GetNeoVimVersion()
     redir => s
@@ -69,6 +73,7 @@ endfunction
 
 source ~/.config/nvim/config/clipboard.vim
 source ~/.config/nvim/config/preferences.vim
+
 source ~/.config/nvim/config/keymaps.vim
 source ~/.config/nvim/config/autocmds.vim
 source ~/.config/nvim/config/styles.vim " styles.vim should be at the last line
