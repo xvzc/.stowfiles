@@ -3,6 +3,7 @@ filetype plugin indent on
 let g:cur_os=$CUR_OS
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 call plug#begin()
 " Completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'antoinemadec/coc-fzf'
@@ -60,6 +61,9 @@ Plug 'morhetz/gruvbox'
 " Plug 'Shougo/neocomplcache.vim'
 " Plug 'vim-scripts/nginx.vim'
 call plug#end()
+=======
+lua require('plugins')
+>>>>>>> Stashed changes
 =======
 lua require('plugins')
 >>>>>>> Stashed changes
