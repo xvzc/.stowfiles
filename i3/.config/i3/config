@@ -306,7 +306,7 @@ for_window [title="Wine"] move position 10 997
 # Init
 exec_always --no-startup-id "setxkbmap -layout us,kr"
 exec_always --no-startup-id "xmodmap -e 'add Mod1 = Alt_R'"
-exec_always --no-startup-id "xset dpms 7200"
+exec_always --no-startup-id "xset s 7200"
 
 # bindsym
 # change container layout (stacked, tabbed, toggle split)

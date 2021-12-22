@@ -33,6 +33,7 @@ endif
 Plug 'tpope/vim-markdown'
 Plug 'fatih/vim-go', { 'tag': '*'  }
 
+
 " Styles
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'

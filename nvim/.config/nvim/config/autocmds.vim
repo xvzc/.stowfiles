@@ -9,6 +9,9 @@ autocmd BufRead,BufNewFile *.nginx set ft=nginx
 autocmd BufRead,BufNewFile ~/_jry/algorithms/*.cpp 
       \ nnoremap <silent><C-M-t> :0r ~/_jry/algorithms/cpp/template.cpp<CR>
 
+autocmd BufRead,BufNewFile Dockerfile.*
+      \ set ft=dockerfile
+
 autocmd filetype python 
       \ nnoremap <silent><M-C-r> :call RUN_PYTHON()<CR>
 autocmd filetype cpp 

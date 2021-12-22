@@ -28,6 +28,11 @@ hi SpellLocal term=underline cterm=underline
 
 hi clear Error 
 
+hi clear Conceal
+" hi Conceal ctermfg=109 guifg=#83a598
+hi Conceal ctermfg=102 guifg=#878787
+hi Conceal ctermfg=66 guifg=#5f8787
+
 hi gruvboxRed guifg=#eb503f
 
 " Search highlight
