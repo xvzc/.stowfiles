@@ -1,5 +1,6 @@
 autocmd FileType vim set shiftwidth=2
 autocmd FileType zsh set shiftwidth=2
+autocmd FileType lua set shiftwidth=2
 
 autocmd BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
 autocmd BufRead,BufNewFile */etc/nginx/* set ft=nginx

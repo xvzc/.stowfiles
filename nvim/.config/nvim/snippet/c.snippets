@@ -75,7 +75,7 @@ for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
 endsnippet
 
 snippet fora "for-loop" b
-for (${1:var}; ${2:condition}; `!p
+for (${1:var}; ${2}; `!p
 if len(t[1]) > 0:
 	snip.rv = t[1].split('=')[0].split()[-1]
 `++) {
@@ -105,7 +105,7 @@ fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%
 endsnippet
 
 snippet eli "else if .. (eli)"
-else if (${1:/* condition */}) {
+else if (${1}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -228,7 +228,7 @@ endsnippet
 
 # while
 snippet wh
-while (${1:/* condition */}) {
+while (${1}) {
 	${0:${VISUAL}}
 }
 endsnippet
@@ -237,7 +237,7 @@ endsnippet
 snippet do
 do {
 	${0:${VISUAL}}
-} while (${1:/* condition */});
+} while (${1);
 endsnippet
 
 # function definition

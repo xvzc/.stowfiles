@@ -32,6 +32,8 @@ let g:coc_config_home = '~/.config/nvim/config/'
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+autocmd filetype cpp silent call coc#config('clangd.fallbackFlags',['-std=c++17'])
+
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -94,8 +96,8 @@ inoremap <silent><expr> <S-TAB>
       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetPrev', [])<cr>" :
       \ "\<C-d>"
 
-snoremap <buffer><nowait><silent><TAB> <Esc>:call coc#rpc#request('snippetNext', [])<cr>
-snoremap <buffer><nowait><silent><S-TAB> <Esc>:call coc#rpc#request('snippetPrev', [])<cr>
+snoremap <buffer><silent><TAB> <Esc>:call coc#rpc#request('snippetNext', [])<cr>
+snoremap <buffer><silent><S-TAB> <Esc>:call coc#rpc#request('snippetPrev', [])<cr>
 
 " functions
 " tab behavior
