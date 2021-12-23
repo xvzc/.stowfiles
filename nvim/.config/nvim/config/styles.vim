@@ -12,6 +12,9 @@ highlight visual ctermfg=grey ctermbg=black guifg=#0F0F0F guibg=#959595 gui=none
 hi CursorLineNR ctermbg=NONE guibg=NONE
 hi CursorLine term=none cterm=none ctermbg=none guibg=None
 
+hi Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
+hi PmenuSel ctermfg=NONE ctermbg=24 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
+
 " Red background issue 
 " Use :highlight to see all the settings of highlight
 hi clear SpellBad

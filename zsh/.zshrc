@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 zmodload zsh/zprof
 
 ZSH_DISABLE_COMPFIX="true"
@@ -27,3 +29,5 @@ source ~/.zsh/fpath
 source ~/.zsh/load
 
 prompt pure
+
+
