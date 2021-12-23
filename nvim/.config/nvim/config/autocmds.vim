@@ -2,6 +2,16 @@ autocmd FileType vim set shiftwidth=2
 autocmd FileType zsh set shiftwidth=2
 autocmd FileType lua set shiftwidth=2
 
+autocmd FileType javascript set shiftwidth=2 tabstop=2
+autocmd FileType javascriptreact set shiftwidth=2 tabstop=2
+autocmd FileType typescript set shiftwidth=2 tabstop=2
+autocmd FileType typescriptreact set shiftwidth=2 tabstop=2
+
+autocmd BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
+autocmd BufRead,BufNewFile */etc/nginx/* set ft=nginx
+autocmd BufRead,BufNewFile nginx.conf set ft=nginx
+autocmd BufRead,BufNewFile *.nginx set ft=nginx
+
 autocmd BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
 autocmd BufRead,BufNewFile */etc/nginx/* set ft=nginx
 autocmd BufRead,BufNewFile nginx.conf set ft=nginx

@@ -1,6 +1,5 @@
 let g:coc_global_extensions = [ 
       \ 'coc-snippets', 
-      \ 'coc-html', 
       \ 'coc-tsserver', 
       \ 'coc-sh', 
       \ 'coc-json', 
@@ -8,6 +7,7 @@ let g:coc_global_extensions = [
       \ 'coc-clangd',
       \ 'coc-ultisnips',
       \ 'coc-snippets',
+      \ 'coc-emmet',
       \ 'coc-explorer',
       \ ]
 
@@ -85,12 +85,34 @@ if exists('*complete_info')
   inoremap <silent><expr> <cr> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+" inoremap <silent><nowait><expr> <Tab>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetNext', [])<cr>" :
+"       \ coc#expandable() ? "\<C-R>=coc#rpc#request('doKeymap', ['snippets-expand',''])<CR>" :
+"       \ <SID>check_back_space() ? "\<Tab>" :
+"       \ coc#refresh()
+
 inoremap <silent><nowait><expr> <Tab>
       \ pumvisible() ? coc#_select_confirm() :
-      \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetNext', [])<cr>" :
-      \ coc#expandable() ? "\<C-R>=coc#rpc#request('doKeymap', ['snippets-expand',''])<CR>" :
+	  \ coc#expandableOrJumpable() ?
+	  \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+
+
+function! s:is_pumselected()
+  if !pumvisible()
+    return 0
+  endif
+
+  if(empty(v:completed_item))
+    return 0
+  endif
+
+  return 1
+endfunction
+
 
 inoremap <silent><expr> <S-TAB>
       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetPrev', [])<cr>" :

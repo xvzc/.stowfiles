@@ -1,59 +1,53 @@
 vim.cmd [[packadd packer.nvim]]
 
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
-
 return require('packer').startup({function(use)
-  use {
+  use 'wbthomason/packer.nvim'
+
+  use { -- coc
     {'neoclide/coc.nvim', branch = 'release'},
-    'antoinemadec/coc-fzf'
+    'antoinemadec/coc-fzf',
   }
 
-  use { 
+  use { -- auto completions
+    'honza/vim-snippets',
     'SirVer/ultisnips',
     'tpope/vim-markdown'
   }
 
-  use {
-    'tpope/vim-fugitive',
-    'airblade/vim-gitgutter',
-    'fatih/vim-go'
+
+  use { -- syntax
+    -- 'bfrg/vim-cpp-modern',
+    'octol/vim-cpp-enhanced-highlight',
+    'othree/yajs.vim', -- js syntax
+    'HerringtonDarkholme/yats.vim', -- ts
+    'yuezk/vim-js',
+    'maxmellon/vim-jsx-pretty',
+    'fatih/vim-go',
   }
 
-  use { 
-    'tpope/vim-surround',
-    'jiangmiao/auto-pairs',
-    'godlygeek/tabular',
-    'scrooloose/nerdcommenter',
-  }
-
-  use {
-    'itchyny/lightline.vim',
-    'junegunn/goyo.vim',
-    'ryanoasis/vim-devicons', -- Nerd tree icon
-    'morhetz/gruvbox',
-    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
-
-  }
-
-  -- misc
-  use { 
-    { 
-      "iamcco/markdown-preview.nvim", run = "cd app && npm install", 
-      setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }
-    },
-    'mhinz/vim-startify', --fancy start screen
-  } 
-
-  -- toggle window features
-  use {
+  use { -- utils
     'junegunn/fzf', { run = './install --bin' },
     'junegunn/fzf.vim',
     'akinsho/toggleterm.nvim',
     'kdheepak/lazygit.nvim',
+    'tpope/vim-fugitive',
+    'airblade/vim-gitgutter',
+    'easymotion/vim-easymotion',
+    'tpope/vim-surround',
+    'jiangmiao/auto-pairs',
+    'godlygeek/tabular',
+    'scrooloose/nerdcommenter',
+    { "iamcco/markdown-preview.nvim", run = "cd app && npm install", 
+      setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" } },
+  }
+
+  use { -- styles
+    'itchyny/lightline.vim',
+    'junegunn/goyo.vim',
+    'ryanoasis/vim-devicons', -- Nerd tree icon
+    'morhetz/gruvbox',
+    'mhinz/vim-startify', --fancy start screen
+    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
   }
 
   if packer_bootstrap then

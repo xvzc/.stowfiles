@@ -1,4 +1,5 @@
-colorscheme gruvbox
+ colorscheme gruvbox
+
 
 " set visual mode color to grey
 " highlight visual ctermbg=black ctermfg=grey
@@ -7,7 +8,7 @@ colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE 
 
 " Visual background color
-highlight visual ctermfg=grey ctermbg=black guifg=#0F0F0F guibg=#959595 gui=none 
+hi Visual ctermfg=grey ctermbg=black guifg=#0F0F0F guibg=#959595 gui=none 
 
 hi CursorLineNR ctermbg=NONE guibg=NONE
 hi CursorLine term=none cterm=none ctermbg=none guibg=None
@@ -19,6 +20,7 @@ hi PmenuSel ctermfg=NONE ctermbg=24 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
 " Use :highlight to see all the settings of highlight
 hi clear SpellBad
 hi SpellBad term=standout ctermfg=1 term=underline cterm=underline
+
 " highlight SpellBad term=standout term=underline cterm=underline
 hi clear SpellCap
 hi SpellCap term=underline cterm=underline
@@ -32,8 +34,6 @@ hi SpellLocal term=underline cterm=underline
 hi clear Error 
 
 hi clear Conceal
-" hi Conceal ctermfg=109 guifg=#83a598
-hi Conceal ctermfg=102 guifg=#878787
 hi Conceal ctermfg=66 guifg=#5f8787
 
 hi gruvboxRed guifg=#eb503f

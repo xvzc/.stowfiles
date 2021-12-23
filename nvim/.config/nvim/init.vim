@@ -16,7 +16,7 @@ source ~/.config/nvim/config/preferences.vim
 
 source ~/.config/nvim/config/keymaps.vim
 source ~/.config/nvim/config/autocmds.vim
-source ~/.config/nvim/config/styles.vim " styles.vim should be at the last line
+source ~/.config/nvim/config/styles.vim
 
 for f in split(glob('~/.config/nvim/config/plugins/*.vim'), '\n') " load all plugin settings
     exe 'source' f

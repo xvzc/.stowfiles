@@ -38,6 +38,8 @@
     "typescript.suggestionActions.enabled" : true,
     "javascript.suggestionActions.enabled" : true,
 
+    "emmet.includeLanguages": {"javascript": "javascriptreact"},
+
     "imselect.defaultInput": "com.apple.keylayout.ABC",
     "imselect.enableStatusItem": true,
 
@@ -87,7 +89,7 @@
     "suggest.labelMaxLength": 80,
     "suggest.detailField": "menu",
     "suggest.disableKind": false,
-    "suggest.autoTrigger": "trigger",
+    "suggest.autoTrigger": "always",
     "suggest.highPrioritySourceLimit": 20,
     "suggest.removeDuplicateItems": true,
     "suggest.floatEnable": true,
