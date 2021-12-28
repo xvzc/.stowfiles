@@ -22,7 +22,7 @@ return require('packer').startup({function(use)
     'HerringtonDarkholme/yats.vim', -- ts
     'yuezk/vim-js',
     'maxmellon/vim-jsx-pretty',
-    'fatih/vim-go',
+    -- 'fatih/vim-go',
   }
 
   use { -- utils

@@ -29,5 +29,3 @@ source ~/.zsh/fpath
 source ~/.zsh/load
 
 prompt pure
-
-
