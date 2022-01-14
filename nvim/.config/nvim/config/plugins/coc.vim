@@ -81,16 +81,8 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
 endif
 
 
-if exists('*complete_info')
-  inoremap <silent><expr> <cr> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+  inoremap <silent><expr> <cr> "\<C-g>u\<CR>"
 
-" inoremap <silent><nowait><expr> <Tab>
-"       \ pumvisible() ? coc#_select_confirm() :
-"       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetNext', [])<cr>" :
-"       \ coc#expandable() ? "\<C-R>=coc#rpc#request('doKeymap', ['snippets-expand',''])<CR>" :
-"       \ <SID>check_back_space() ? "\<Tab>" :
-"       \ coc#refresh()
 
 inoremap <silent><nowait><expr> <Tab>
       \ pumvisible() ? coc#_select_confirm() :
@@ -98,21 +90,6 @@ inoremap <silent><nowait><expr> <Tab>
 	  \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
-
-
-
-function! s:is_pumselected()
-  if !pumvisible()
-    return 0
-  endif
-
-  if(empty(v:completed_item))
-    return 0
-  endif
-
-  return 1
-endfunction
-
 
 inoremap <silent><expr> <S-TAB>
       \ coc#jumpable() ? "\<C-R>=coc#rpc#request('snippetPrev', [])<cr>" :

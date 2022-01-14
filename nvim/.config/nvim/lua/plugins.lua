@@ -22,7 +22,7 @@ return require('packer').startup({function(use)
     'HerringtonDarkholme/yats.vim', -- ts
     'yuezk/vim-js',
     'maxmellon/vim-jsx-pretty',
-    -- 'fatih/vim-go',
+    'fatih/vim-go',
   }
 
   use { -- utils
@@ -37,8 +37,7 @@ return require('packer').startup({function(use)
     'jiangmiao/auto-pairs',
     'godlygeek/tabular',
     'scrooloose/nerdcommenter',
-    { "iamcco/markdown-preview.nvim", run = "cd app && npm install", 
-      setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" } },
+    "iamcco/markdown-preview.nvim",
   }
 
   use { -- styles
