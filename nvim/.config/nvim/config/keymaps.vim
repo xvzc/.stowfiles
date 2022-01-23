@@ -1,6 +1,7 @@
 " disable search highlight when <esc> pressed
-nmap <silent><expr> <esc> v:hlsearch ? 
-            \ "\:nohl<CR>" : 
+
+nmap <silent><expr> <esc> v:hlsearch ?
+            \ "\:nohl<CR>" :
             \"\<esc>"
 
 " new tab

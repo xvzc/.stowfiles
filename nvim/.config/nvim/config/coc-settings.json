@@ -82,6 +82,7 @@
     "suggest.detailField": "menu",
     "suggest.disableKind": false,
     "suggest.autoTrigger": "always",
+    "suggest.minTriggerInputLength": 1,
     "suggest.highPrioritySourceLimit": 20,
     "suggest.removeDuplicateItems": true,
     "suggest.floatEnable": true,
