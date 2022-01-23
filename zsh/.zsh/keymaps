@@ -3,7 +3,7 @@
 # Edit line in vim with ctrl-e:
 autoload -z edit-command-line
 zle -N edit-command-line
-bindkey "^X^E" edit-command-line
+bindkey "^E" edit-command-line
 
 # bindkey '^[[Z' reverse-menu-complete
 

@@ -20,12 +20,12 @@ source ~/.zsh/aliases
 source ~/.zsh/env
 source ~/.zsh/fzf
 source ~/.zsh/opt
-source ~/.zsh/keymaps
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.zsh/styles
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.zsh/fpath
 source ~/.zsh/load
+source ~/.zsh/keymaps
 
 prompt pure
