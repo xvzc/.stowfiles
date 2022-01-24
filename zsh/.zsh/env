@@ -17,14 +17,11 @@ export LS_COLORS="di=1;34:ln=35:so=32:pi=33;40:ex=1;32:bd=34;46:cd=34;43:su=0;41
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL_BIN=$HOME/.local/bin
 
-<<<<<<< Updated upstream
-=======
 export PATH="/usr/local/sbin:$PATH"
 export PATH=${PATH}:$LOCAL_BIN
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH=$PATH:~/.spoof-dpi/bin
 
->>>>>>> Stashed changes
 # ENV
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'  # Usage of python3
