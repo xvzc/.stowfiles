@@ -21,3 +21,4 @@ source ~/.config/nvim/config/styles.vim
 for f in split(glob('~/.config/nvim/config/plugins/*.vim'), '\n') " load all plugin settings
     exe 'source' f
 endfor
+
