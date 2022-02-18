@@ -20,6 +20,9 @@ autocmd BufRead,BufNewFile *.nginx set ft=nginx
 autocmd BufRead,BufNewFile ~/_jry/algorithms/*.cpp 
       \ nnoremap <silent><C-M-t> :0r ~/_jry/algorithms/cpp/template.cpp<CR>
 
+autocmd BufRead,BufNewFile ~/_jry/algorithms/*/baekJoon/*.* 
+      \ nnoremap <silent><C-M-s> :call BOJ_SUBMIT()<CR>
+
 autocmd BufRead,BufNewFile Dockerfile.*
       \ set ft=dockerfile
 
@@ -61,6 +64,12 @@ function! RUN_CPP()
     endif
 
     call system(expand('rm -rf ').getcwd().expand('/a.out')) " remove out the run file
+endfunction
+
+function! BOJ_SUBMIT()
+    silent w
+    let output=system('python3 ~/_jry/algorithms/boj-submit.py '.expand('%:p'))
+    echo output
 endfunction
 
 function! RUN_SH()

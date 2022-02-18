@@ -125,6 +125,11 @@ function set_cur_os() {
     unset GOGOSING
 }
 
+function bojlogin() {
+    touch $HOME/_jry/algorithms/boj-token
+    echo "$1" > ~/_jry/algorithms/boj-token
+}
+
 ########## favorites
 set_cur_os
 # run_tmux_on_cases
