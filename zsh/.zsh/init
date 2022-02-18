@@ -105,5 +105,6 @@ function set_cur_os() {
 
 ########## favorites
 set_cur_os
+init_nvim
 # run_tmux_on_cases
 # init_sdkman
