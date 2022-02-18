@@ -16,9 +16,16 @@
                     }
                 }
             }
+        },
+        "go": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "trace.server": "verbose",
+            "filetypes": ["go"]
         }
     },
 
+    "go.checkForUpdates": "ask" ,
 
     "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
     "clangd.arguments": [
@@ -72,7 +79,7 @@
         "~/.config/nvim/snippet"
     ],
 
-    "snippets.priority": 200,
+    "snippets.priority": 9999,
 
     "suggest.snippetIndicator": "~",
     "suggest.snippetsSupport": true,
@@ -82,7 +89,7 @@
     "suggest.detailField": "menu",
     "suggest.disableKind": false,
     "suggest.autoTrigger": "always",
-    "suggest.minTriggerInputLength": 1,
+    "suggest.minTriggerInputLength": 2,
     "suggest.highPrioritySourceLimit": 20,
     "suggest.removeDuplicateItems": true,
     "suggest.floatEnable": true,
@@ -90,10 +97,11 @@
     "suggest.disableMenu": false,
     "suggest.disableMenuShortcut": false,
     "suggest.acceptSuggestionOnCommitCharacter": false,
-    "suggest.enablePreselect": true,
     "suggest.noselect": true,
     "suggest.echodocSupport": false,
     "suggest.preferCompleteThanJumpPlaceholder": false,
+    "suggest.languageSourcePriority": 99,
+    "suggest.enablePreselect": false,
 
     "diagnostic.floatConfig": {
         "border" : true,
@@ -158,5 +166,4 @@
         "typeParameter": "[tparam]",
         "default": "[none]"
     }
-
 }

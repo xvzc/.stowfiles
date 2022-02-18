@@ -21,8 +21,7 @@ return require('packer').startup({function(use)
     'othree/yajs.vim', -- js syntax
     'HerringtonDarkholme/yats.vim', -- ts
     'yuezk/vim-js',
-    'maxmellon/vim-jsx-pretty',
-    'fatih/vim-go',
+    'maxmellon/vim-jsx-pretty'
   }
 
   use { -- utils

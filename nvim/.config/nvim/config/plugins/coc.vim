@@ -20,7 +20,7 @@ let g:coc_node_path = substitute(system('which node'), '\n', '', '')
 let g:python3_host_skip_check = 1
 let g:python3_host_prog = trim(system('which python3')) " trim removes new line
 
-let g:node_client_debug = 1
+let g:node_client_debug = 0
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = ''
