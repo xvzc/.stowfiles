@@ -64,6 +64,14 @@ function init_sdkman(){
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 }
 
+function init_nvim(){
+    if [ ! -d "$HOME/.config/nvim" ]; then
+        mkdir -p $HOME/.config/nvim
+        mkdir -p $HOME/.config/nvim/backup
+        mkdir -p $HOME/.config/nvim/undo
+    fi
+}
+
 function run_tmux_on_cases(){
     GOGOSING=$(ps -p $(ps -p $$ -o ppid=) -o args=)
     if [[ $CUR_OS == 'linux' ]] && [[ $GOGOSING =~ 'tilda' ]]; then
