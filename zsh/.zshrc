@@ -15,9 +15,9 @@ plugins=(
 )
 
 source $HOME/.profile
+source ~/.zsh/env
 source ~/.zsh/func
 source ~/.zsh/aliases
-source ~/.zsh/env
 source ~/.zsh/fzf
 source ~/.zsh/opt
 source ~/.oh-my-zsh/oh-my-zsh.sh

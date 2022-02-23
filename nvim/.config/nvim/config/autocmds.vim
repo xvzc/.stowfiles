@@ -68,7 +68,7 @@ endfunction
 
 function! BOJ_SUBMIT()
     silent w
-    let output=system('python3 ~/_jry/algorithms/boj-submit.py '.expand('%:p'))
+    let output=system('python3 $BAEKJOON_CLI/boj-submit.py '.expand('%:p'))
     echo output
 endfunction
 

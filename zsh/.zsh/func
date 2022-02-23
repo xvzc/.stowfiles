@@ -126,8 +126,10 @@ function set_cur_os() {
 }
 
 function bojlogin() {
-    touch $HOME/_jry/algorithms/boj-token
-    echo "$1" > ~/_jry/algorithms/boj-token
+    touch $BAEKJOON_CLI/boj-handle
+    touch $BAEKJOON_CLI/boj-token
+    echo "jry9913" > $BAEKJOON_CLI/boj-handle
+    echo "$1" > $BAEKJOON_CLI/boj-token
 }
 
 ########## favorites
