@@ -36,3 +36,6 @@ On WSL, There is an issue that the DNS server is set to a wrong destination, so 
 echo "104.16.17.35\tregistry.npmjs.org" >> /etc/hosts
 ```
 
+# When using multiple github account
+`git remote set-url origin https://xvzc@github.com/xvzc/.stowfiles.git`
+
