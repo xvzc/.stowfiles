@@ -7,6 +7,7 @@ font:
    y: 1
 
 window:
+  opacity: 0.85
   dimensions:
    columns: 125
    lines: 35
@@ -22,7 +23,6 @@ window:
   decorations: "buttonless"
 
 
-background_opacity: 0.85
 
 colors:
 
