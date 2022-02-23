@@ -1,5 +1,5 @@
 # clone
-`git clone --recurse-submodules https://github.com/jerry901/.stowfiles`
+`git clone --recurse-submodules https://github.com/xvzc/.stowfiles`
 
 # .stowfiles
 A repository for dotfiles and settings. GNU software stow is used for version control.
