@@ -14,7 +14,6 @@ plugins=(
     vi-mode
 )
 
-source $HOME/.profile
 source ~/.zsh/env
 source ~/.zsh/func
 source ~/.zsh/aliases
