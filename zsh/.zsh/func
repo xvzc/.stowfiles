@@ -131,9 +131,3 @@ function bojlogin() {
     echo "jry9913" > $BAEKJOON_CLI/boj-handle
     echo "$1" > $BAEKJOON_CLI/boj-token
 }
-
-########## favorites
-set_cur_os
-# run_tmux_on_cases
-# init_sdkman
-
