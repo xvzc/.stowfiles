@@ -27,4 +27,6 @@ source ~/.zsh/fpath
 source ~/.zsh/load
 source ~/.zsh/keymaps
 
+source $HOME/.profile
+
 prompt pure
