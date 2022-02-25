@@ -5,8 +5,7 @@ set keep-english-in-normal
 let mapleader=" "
 set easymotion
 let g:EasyMotion_override_acejump = 0
+let g:EasyMotion_use_upper = 0
 
 nmap <leader>f <Plug>(easymotion-s)
-
-
-
+nmap <leader><leader>f <Plug>(easymotion-s2)
