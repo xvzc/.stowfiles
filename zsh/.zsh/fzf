@@ -57,9 +57,9 @@ function fvi() {
 
 function fcd() {
   if [[ $1 == '--global' ]] || [[ $1 == '-g' ]]; then
-      OUTPUT=$(fd --type d --hidden --search-path=$HOME $2 | fzf)
+      OUTPUT=$(fd --type d --hidden --search-path=$HOME | fzf)
   else
-      OUTPUT=$(fd --type d --hidden $1 | fzf)
+      OUTPUT=$(fd --type d --hidden | fzf)
   fi
 
   if [[ ! -z $OUTPUT ]]; then
