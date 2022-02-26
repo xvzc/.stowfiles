@@ -132,9 +132,3 @@ function bojlogin() {
     echo "jry9913" > $HOME/.boj-cli/boj-handle
     echo "$1" > $HOME/.boj-cli/boj-token
 }
-
-########## favorites
-set_cur_os
-# run_tmux_on_cases
-# init_sdkman
-

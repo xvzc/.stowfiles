@@ -14,7 +14,6 @@ plugins=(
     vi-mode
 )
 
-source $HOME/.profile
 source ~/.zsh/env
 source ~/.zsh/func
 source ~/.zsh/aliases
@@ -27,5 +26,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/fpath
 source ~/.zsh/load
 source ~/.zsh/keymaps
+
+source $HOME/.profile
 
 prompt pure
