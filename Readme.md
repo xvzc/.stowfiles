@@ -37,4 +37,4 @@ echo "104.16.17.35\tregistry.npmjs.org" >> /etc/hosts
 ```
 
 # When using multiple github account
-`git remote set-url origin https://xvzc@github.com/xvzc/.stowfiles.git`
+`git remote set-url origin https://xvzc@github.com/xvzc/REPO_NAME.git`
