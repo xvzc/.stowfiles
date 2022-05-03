@@ -20,7 +20,7 @@ window:
     # none
 
  # no title bar
-  decorations: "buttonless"
+  # decorations: "buttonless"
 
 
 
