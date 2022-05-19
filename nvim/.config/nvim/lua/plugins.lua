@@ -25,7 +25,7 @@ return require('packer').startup({function(use)
   }
 
   use { -- utils
-    'junegunn/fzf', { run = './install --bin' },
+    {'junegunn/fzf',  run = './install --bin' },
     'junegunn/fzf.vim',
     'akinsho/toggleterm.nvim',
     'kdheepak/lazygit.nvim',
