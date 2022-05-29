@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # conda
 function init_conda(){
