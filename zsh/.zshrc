@@ -26,6 +26,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/fpath
 source ~/.zsh/load
 source ~/.zsh/keymaps
+source ~/.zsh/vi-opt
 
 source $HOME/.profile
 
