@@ -39,7 +39,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 " functions
 function! RUN_PYTHON()
     silent w
-    let output=system('run-python '.expand('%:p'))
+    let output=system('python3 '.expand('%:p'))
     echo ' '
     echo '-------OUTPUT--------'
     echo ' '
