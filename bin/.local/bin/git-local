@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -n "github user.email : "
+read email
+echo -n "github user.name : "
+read name 
+echo -n "github personal token : "
+read token 
+
+git config --local user.email $email
+git config --local user.name $name
+git config --local credential.helper store $token
