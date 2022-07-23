@@ -40,3 +40,4 @@ echo "104.16.17.35\tregistry.npmjs.org" >> /etc/hosts
 `git remote set-url origin https://xvzc@github.com/xvzc/REPO_NAME.git`
 
 
+
